@@ -8,12 +8,13 @@ class Button:
     def __init__(self, game, label):
         self.screen = game.screen
         self.screen_rect = game.screen_rect
-        self.width = 100
+        self.width = 150
         self.height = 50
         self.color = 'CornflowerBlue'
         self.text_color = 'white'
-        self.image = pygame.image.load('./image/background-vu-tru-huyen-bi.jpg')
+        self.image = pygame.image.load('./image/start.png')
         self.image = pygame.transform.scale(self.image, (20, 20))
+        self.image_rect = self.image.get_rect()
         self.font = pygame.font.SysFont(None, 50)
         self.rect = pygame.Rect(0, 0, self.width, self.height)
         self.rect.center = self.screen_rect.center
@@ -24,6 +25,6 @@ class Button:
         self.text_rect.center = self.screen_rect.center
 
     def draw(self):
-        self.screen.fill(self.color, self.rect)
-        self.screen.blit(self.text, self.text_rect)
+        self.screen.fill(self.color,self.rect)
+        self.screen.blit(self.text,self.text_rect)
 

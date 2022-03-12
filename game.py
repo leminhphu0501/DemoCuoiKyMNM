@@ -18,7 +18,7 @@ class Game:
         self.screen_rect = self.screen.get_rect()
         self.screen.fill((240, 230, 140))
         pygame.display.set_caption("Game Bắn Gà")  # đặt tiêu đề
-        self.image = pygame.image.load('./image/background.jpg')  # nền
+        self.image = pygame.image.load('./image/background-vu-tru-huyen-bi.jpg')  # nền
         self.image = pygame.transform.scale(self.image, (850, 540))
         # khởi tạo phi thuyền
         self.phithuyen = PhiThuyen(self)
@@ -32,7 +32,7 @@ class Game:
         self.soquaivat = self.screen.get_width() // (tam.rect.width*2)
         self.sohang = (self.screen.get_height()//2) // (tam.rect.height*2)
         self.so_phi_thuyen = 3
-        self.nut_bam = Button(self, f'Play')
+        self.nut_bam = Button(self, f'Bat dau')
         self.dang_choi = False
         self.clock = pygame.time.Clock()
         self.diem = 0
@@ -167,7 +167,7 @@ class Game:
                 #print('Bạn đã thua! Dừng trò chơi :) ')
                 #Tính điểm
                 for quai_vat in va_cham.values():
-                    self.diem += 10 * len(quai_vat)
+                    self.diem += 20 * len(quai_vat)
                 self.bang_diem.tinh_diem(self)
                 self.bang_diem.kiem_tra_ky_luc(self)
             # self.taoquaivat()

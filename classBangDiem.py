@@ -36,6 +36,6 @@ class BangDiem:
         self.phi_thuyen = Group()
         for i in range(game.so_phi_thuyen):
             phi_thuyen = PhiThuyen(game)
-            phi_thuyen.rect.bottomright = game.screen_rect.bottomright
+            phi_thuyen.rect.topright = game.screen_rect.topright
             phi_thuyen.rect.x -= i * phi_thuyen.rect.width
             self.phi_thuyen.add(phi_thuyen)
